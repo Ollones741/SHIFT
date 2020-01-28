@@ -1,0 +1,25 @@
+html,
+body 
+{
+   height: 100%;
+}
+
+aside
+{
+   border-style: solid;
+   border-width: 1px;
+   height: 200px;
+}
+
+main
+{
+   border-style: solid;
+   border-width: 1px;
+   height: 4000px;
+}
+
+footer
+{
+   position: fixed;
+   bottom: 0;
+}
