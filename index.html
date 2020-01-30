@@ -3,18 +3,18 @@
    <head>
       <meta charset = "UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css">
+      <link rel="stylesheet" href="style.css">
       <title>Отличник</title>
    </head>
    <body>
-      <nav class="navbar bg-light navbar-expand">
-         <a class="navbar-brand" href"#">81 cs</a>
+      <nav class="navbar bg-dark navbar-expand">
+         <a class="navbar-brand text-light" href"#">Отличник</a>
          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown dropleft">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Users</a>
             <div class="dropdown-menu">
-               <a class="dropdown-item" href="#">User A</a>
+               <a class="dropdown-item" href="#" selected>User A</a>
                <a class="dropdown-item" href="#">User B</a>
                <a class="dropdown-item" href="#">User C</a>
             </div>
@@ -24,18 +24,47 @@
       
       <div class="container-fluid">
          <div class="row">
-            <aside class="col-md-3" style="background-color:lavender;">
-               a
+            <aside class="col-md-3 sticky-top">
+            <button type="button" class="btn btn-dark btn-block show" data-toggle="collapse" data-target=".btn-group-vertical">Предметы</button>
+                  <div class="btn-group-vertical collapse">
+                     <button type="button" class="btn btn-secondary btn-block">Все предметы</button>
+                     <button type="button" class="btn btn-secondary btn-block">Линейная алгебра</button>
+                     <button type="button" class="btn btn-secondary btn-block">Дискретная математика</button>
+                     <button type="button" class="btn btn-secondary btn-block">Математический анализ</button>
+                  </div>
             </aside>
-         
-            <main class="col-md-9">
-               b
+            <div class="col-md-1"></div>
+            <main class="col-md-7">
+               <div class="card">
+                  <div class="card-body">
+                     <h4 class="card-title">Линейная алгебра</h4>
+                     <p class="card-text">Вопросики, вопросики.</p>
+                     <a href="#" class="card-link">Редактировать</a>
+                     <a href="#" class="card-link">Автор</a>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-body">
+                     <h4 class="card-title">Дискретная математика</h4>
+                     <p class="card-text">Вопросики, вопросики.</p>
+                     <a href="#" class="card-link">Редактировать</a>
+                     <a href="#" class="card-link">Автор</a>
+                  </div>
+               </div>
+               <div class="card">
+                  <div class="card-body">
+                     <h4 class="card-title">Математический анализ</h4>
+                     <p class="card-text">Вопросики, вопросики.</p>
+                     <a href="#" class="card-link">Редактировать</a>
+                     <a href="#" class="card-link">Автор</a>
+                  </div>
+               </div>
             </main>
          </div>
       </div>
       
-      <footer class="container-fluid text-center" style="background-color:lavender;">
-         c
+      <footer class="container-fluid text-center text-muted" style="background-color:lavender;">
+         Developed by Vacuum Acoustic
       </footer>
       <script src="node_modules/jquery/dist/jquery.slim.min.js" type="text/javascript"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
