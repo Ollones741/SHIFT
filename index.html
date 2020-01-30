@@ -11,14 +11,14 @@
       <nav class="navbar bg-dark navbar-expand">
          <a class="navbar-brand text-light" href"#">Отличник</a>
          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown dropleft">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Users</a>
-            <div class="dropdown-menu">
-               <a class="dropdown-item" href="#" selected>User A</a>
-               <a class="dropdown-item" href="#">User B</a>
-               <a class="dropdown-item" href="#">User C</a>
+            <div class="user-select">
+               <span class="select_label text-light">Пользователь</span>
+               <select class="select_control select_control-user" name="userId">
+                  <option value="UserA" selected>User A</option>
+                  <option value="UserB">User B</option>
+                  <option value="UserC">User C</option>
+               </select>
             </div>
-            </li>
          </ul>
       </nav>
       
@@ -26,15 +26,48 @@
          <div class="row">
             <aside class="col-md-3 sticky-top">
             <button type="button" class="btn btn-dark btn-block show" data-toggle="collapse" data-target=".btn-group-vertical">Предметы</button>
-                  <div class="btn-group-vertical collapse">
-                     <button type="button" class="btn btn-secondary btn-block">Все предметы</button>
-                     <button type="button" class="btn btn-secondary btn-block">Линейная алгебра</button>
-                     <button type="button" class="btn btn-secondary btn-block">Дискретная математика</button>
-                     <button type="button" class="btn btn-secondary btn-block">Математический анализ</button>
+                  <div id="menu" class="btn-group-vertical collapse">
+                     <button type="button" class="btn btn-secondary btn-block" data-course='all' onclick="">Все предметы</button>
+                     <button type="button" class="btn btn-secondary btn-block" data-course='linear' onclick="">Линейная алгебра</button>
+                     <button type="button" class="btn btn-secondary btn-block" data-course='discret' onclick="">Дискретная математика</button>
+                     <button type="button" class="btn btn-secondary btn-block" data-course='analys' onclick="">Математический анализ</button>
                   </div>
             </aside>
             <div class="col-md-1"></div>
-            <main class="col-md-7">
+            <main id="questions" class="col-md-7">
+               <div id="addQuestion">
+                  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#addQuest">
+                  Создать вопрос
+                  </button>
+                  <div class="modal" id="addQuest">
+                     <div class="modal-dialog">
+                        <div class="modal-content">
+                           <div class="modal-header">
+                              <h4 class="modal-title">Добавить вопрос</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                           </div>
+                           <div class="modal-body">
+                              <form>
+                                 <div class="form-group">
+                                    <label for="text">Текст вопроса:</label>
+                                    <input type="text" class="form-control" placeholder="Введите вопрос" id="text">
+                                 </div>
+                                 <div class="form-group">
+                                    <span class="select_label">Предмет</span>
+                                    <select class="select_control select_control-user" name="courseId">
+                                       <option value="course1" selected>Линал</option>
+                                       <option value="course2">Дискрет</option>
+                                       <option value="course3">Матан</option>
+                                    </select>
+                                 </div>
+                                 <button type="submit" class="btn btn-primary">Submit</button>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <hr>
+               </div>
                <div class="card">
                   <div class="card-body">
                      <h4 class="card-title">Линейная алгебра</h4>
@@ -68,4 +101,6 @@
       </footer>
       <script src="node_modules/jquery/dist/jquery.slim.min.js" type="text/javascript"></script>
       <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="script.js" type="text/javascript"></script>
+      <script src="utils.js" type="text/javascript"></script>
    </body>
