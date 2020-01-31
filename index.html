@@ -12,11 +12,11 @@
          <a class="navbar-brand text-light" href"#">Отличник</a>
          <ul class="navbar-nav ml-auto">
             <div class="user-select">
-               <span class="select_label text-light">Пользователь</span>
-               <select class="select_control select_control-user" name="userId">
-                  <option value="UserA" selected>User A</option>
-                  <option value="UserB">User B</option>
-                  <option value="UserC">User C</option>
+               <span class="select_label text-light">Пользователь </span>
+               <select class="select_control select_control-user" name="userId" id="selector">
+                  <option value="Anton" selected>Антон</option>
+                  <option value="Artem">Артем</option>
+                  <option value="Jenya">Женя</option>
                </select>
             </div>
          </ul>
@@ -31,7 +31,6 @@
                      
                   </div>
             </aside>
-            <div class="col-md-1"></div>
             <main class="col-md-7">
                <div>
                   <button type="button" class="btn btn-link" data-toggle="modal" data-target="#addQuest">
@@ -51,11 +50,12 @@
                                     <input type="text" class="form-control field_control" placeholder="Введите вопрос" name="text">
                                  </div>
                                  <div class="form-group">
-                                    <span class="select_label">Предмет</span>
-                                    <select id="form" class="select_control select_control-user field_control" name="subject">
-                                       <option value="course1" selected>Линал</option>
-                                       <option value="course2">Дискрет</option>
-                                       <option value="course3">Матан</option>
+                                    <span class="select_label">Предмет: </span>
+                                    <select id="form" class="select_control field_control" name="subject">
+                                       <option value="Философия" selected>Философия</option>
+                                       <option value="Математика">Математика</option>
+                                       <option value="История">История</option>
+                                       <option value="Информатика">Информатика</option>
                                     </select>
                                  </div>
                                  <div class="form-group">
