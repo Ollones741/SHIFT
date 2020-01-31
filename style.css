@@ -35,6 +35,7 @@ ul
 .btn-group-vertical
 {
    display: block;
+
 }
 
 .btn
@@ -82,9 +83,16 @@ ul
 .card
 {
    margin-top: 5px;
+   border-radius: 0;
 }
 
 .btn-block + .btn-block
 {
    margin-top: 0;
+}
+
+.card-footer
+{
+   padding: 0.25rem 0.5rem;
+   border-top: 0;
 }
