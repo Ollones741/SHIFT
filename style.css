@@ -83,3 +83,8 @@ ul
 {
    margin-top: 5px;
 }
+
+.btn-block + .btn-block
+{
+   margin-top: 0;
+}
