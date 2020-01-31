@@ -8,7 +8,7 @@ const renderQuestions = object => `
          </div>
          <div class="card-footer text-right">
          
-            <p class="card-text"><a href="#" class="card-link">Редактировать</a> ${object.author}</p>
+            <p class="card-text">${object.author}</p>
          </div>
       </div>`;
       
