@@ -3,8 +3,12 @@ const renderQuestions = object => `
          <div class="card-body">
             <h4 class="card-title">${object.subject}</h4>
             <p class="card-text">${object.text}</p>
-            <a href="#" class="card-link">Редактировать</a>
-            <a href="#" class="card-link">${object.author}</a>
+            <a href="#${object.id}" class="card-link" data-toggle = collapse>Посмотреть ответ</a>
+            <p id="${object.id}" class="card-text collapse">${object.correctAnswer}</p> 
+         </div>
+         <div class="card-footer text-right">
+         
+            <p class="card-text"><a href="#" class="card-link">Редактировать</a> ${object.author}</p>
          </div>
       </div>`;
       
@@ -17,7 +21,7 @@ const renderForm = value => `
       `;
 
 const loadMenu = (event) => {
-   createRequest({ path: `api/v001/questions`, method: "GET"})
+   createRequest({ path: `/api/v001/questions`, method: "GET"})
     .then(response => {
        document.querySelector('#menu').innerHTML = response.questions
        .map(renderMenu)
@@ -49,7 +53,7 @@ const loadQuestions = (event) => {
 };
 
 const loadAllQuestions = (event) => {
-   createRequest({ path: `/api/v001/questions`, method: "GET"})
+   createRequest({ path: `/api/v001/questions/?page=0`, method: "GET"})
     .then(response => {
          document.querySelector('#body').innerHTML = response.questions
          .map(renderQuestions)
@@ -69,6 +73,7 @@ const loadForm = (event) => {
 };
 
 document.addEventListener('DOMContentLoaded', loadMenu);
+
 window.onload = loadAllQuestions;
 
 const addQuestionForm = document.querySelector('#addQuestion');
